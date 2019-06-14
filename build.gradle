@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+
+wrapper {
+    gradleVersion = '5.4.1'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+
+    compile "org.codehaus.groovy:groovy-all:2.5.7"
+    compile "commons-io:commons-io:2.6"
+
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4-rc-2"
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+}
